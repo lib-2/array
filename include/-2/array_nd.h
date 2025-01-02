@@ -4,8 +4,6 @@
 #include <stddef.h>
 #include <string.h>
 
-#include "-0/debug.h"
-#include "-0/debug_types.h"
 #include "-0_types.h"
 
 #include "array_nd_internal.h"
@@ -23,10 +21,8 @@
     unsigned char opaque[];                                                    \
   } g_2_array_nd__##dimension##__t;                                            \
   static inline g_2_array_nd__##dimension##__t                                 \
-      *g_2_array_nd__##dimension##__new(                                       \
-          G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE size_t element_size,            \
-          size_t length[dimension]) {                                          \
-    G_0_DEBUG_FUNCTION_BODY_PRELUDE;                                           \
+      *g_2_array_nd__##dimension##__new(size_t element_size,                   \
+                                        size_t length[dimension]) {            \
     g_2_array_nd__##dimension##__t *const result =                             \
         (g_2_array_nd__##dimension##__t *)g_2_array_nd_internal_alloc(         \
             element_size, length, dimension,                                   \
@@ -36,10 +32,8 @@
     return result;                                                             \
   }                                                                            \
   static inline g_0_err_t g_2_array_nd__##dimension##__set(                    \
-      G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE g_2_array_nd__##dimension##__t      \
-          *self,                                                               \
-      size_t index[dimension], const void *data) {                             \
-    G_0_DEBUG_FUNCTION_BODY_PRELUDE;                                           \
+      g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
+      const void *data) {                                                      \
     size_t idx;                                                                \
     if (g_2_array_nd_internal_index(self->length, index, dimension, &idx)) {   \
       return 1;                                                                \
@@ -50,10 +44,8 @@
     return 0;                                                                  \
   }                                                                            \
   static inline g_0_err_t g_2_array_nd__##dimension##__get(                    \
-      G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE g_2_array_nd__##dimension##__t      \
-          *self,                                                               \
-      size_t index[dimension], void *data) {                                   \
-    G_0_DEBUG_FUNCTION_BODY_PRELUDE;                                           \
+      g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
+      void *data) {                                                            \
     size_t idx;                                                                \
     if (g_2_array_nd_internal_index(self->length, index, dimension, &idx)) {   \
       return 1;                                                                \
@@ -65,10 +57,8 @@
     return 0;                                                                  \
   }                                                                            \
   static inline g_0_err_t g_2_array_nd__##dimension##__get_addr(               \
-      G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE g_2_array_nd__##dimension##__t      \
-          *self,                                                               \
-      size_t index[dimension], void **out) {                                   \
-    G_0_DEBUG_FUNCTION_BODY_PRELUDE;                                           \
+      g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
+      void **out) {                                                            \
     size_t idx;                                                                \
     if (g_2_array_nd_internal_index(self->length, index, dimension, &idx)) {   \
       return 1;                                                                \
