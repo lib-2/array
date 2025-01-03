@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <string.h>
 
-#include "-0_types.h"
+#include "-0_common.h"
 
 #include "array_nd_internal.h"
 
