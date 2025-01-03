@@ -3,7 +3,6 @@
 
 #ifdef __cplusplus
 #include <cstddef.h>
-extern "C" {
 #else
 #include <stddef.h>
 #endif
@@ -11,6 +10,10 @@ extern "C" {
 #include "-0_common.h"
 
 #include "array_types.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 G_API g_2_array_t *g_2_array(size_t length, size_t element_size,
                              g_err_t (*initialize)(void *context, size_t i,

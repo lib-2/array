@@ -3,9 +3,12 @@
 
 #ifdef __cplusplus
 #include <cstddef.h>
-extern "C" {
 #else
 #include <stddef.h>
+#endif
+
+#ifdef __cplusplus
+extern "C" {
 #endif
 
 typedef struct g_2_array {

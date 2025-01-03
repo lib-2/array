@@ -3,13 +3,16 @@
 
 #ifdef __cplusplus
 #include <cstddef>
-extern "C" {
 #else
 #include <stdbool.h>
 #include <stddef.h>
 #endif
 
 #include "-0_common.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 G_API void g_0_bzero(void *ptr, size_t size);
 G_API void *g_0_memdup(void *ptr, size_t size);
