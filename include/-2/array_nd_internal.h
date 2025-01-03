@@ -9,13 +9,11 @@
 
 #include "-0_common.h"
 
-G_API void *g_2_array_nd_internal_alloc(size_t element_size,
-                                        const size_t *length, size_t dimension,
-                                        size_t struct_size);
+void *g_2_array_nd_internal_alloc(size_t element_size, const size_t *length,
+                                  size_t dimension, size_t struct_size);
 
-G_API g_err_t g_2_array_nd_internal_index(const size_t *length,
-                                          const size_t *index, size_t dimension,
-                                          size_t *out);
+g_err_t g_2_array_nd_internal_index(const size_t *length, const size_t *index,
+                                    size_t dimension, size_t *out);
 
 static inline void *g_2_array_nd_internal_addr_unchecked(void *data,
                                                          size_t element_size,

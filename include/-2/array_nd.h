@@ -31,7 +31,7 @@
     result->element_size = element_size;                                       \
     return result;                                                             \
   }                                                                            \
-  static inline g_0_err_t g_2_array_nd__##dimension##__set(                    \
+  static inline g_err_t g_2_array_nd__##dimension##__set(                      \
       g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
       const void *data) {                                                      \
     size_t idx;                                                                \
@@ -43,7 +43,7 @@
            data, self->element_size);                                          \
     return 0;                                                                  \
   }                                                                            \
-  static inline g_0_err_t g_2_array_nd__##dimension##__get(                    \
+  static inline g_err_t g_2_array_nd__##dimension##__get(                      \
       g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
       void *data) {                                                            \
     size_t idx;                                                                \
@@ -56,7 +56,7 @@
            self->element_size);                                                \
     return 0;                                                                  \
   }                                                                            \
-  static inline g_0_err_t g_2_array_nd__##dimension##__get_addr(               \
+  static inline g_err_t g_2_array_nd__##dimension##__get_addr(                 \
       g_2_array_nd__##dimension##__t *self, size_t index[dimension],           \
       void **out) {                                                            \
     size_t idx;                                                                \

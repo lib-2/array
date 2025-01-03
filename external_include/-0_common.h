@@ -1,2 +1,10 @@
-#include "-0/common_macros.h"
-#include "-0/common_types.h"
+#ifndef G_0_COMMON_H
+#define G_0_COMMON_H
+
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
+
+typedef bool g_err_t;
+
+#endif

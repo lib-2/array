@@ -15,16 +15,16 @@
 extern "C" {
 #endif
 
-G_API g_2_array_t *g_2_array(size_t length, size_t element_size,
-                             g_err_t (*initialize)(void *context, size_t i,
-                                                   void *out),
-                             void *context);
+g_2_array_t *g_2_array(size_t length, size_t element_size,
+                       g_err_t (*initialize)(void *context, size_t i,
+                                             void *out),
+                       void *context);
 
-G_API g_err_t g_2_array_set(g_2_array_t *self, size_t index, const void *data);
+g_err_t g_2_array_set(g_2_array_t *self, size_t index, const void *data);
 
-G_API g_err_t g_2_array_get(g_2_array_t *self, size_t index, void *data);
+g_err_t g_2_array_get(g_2_array_t *self, size_t index, void *data);
 
-G_API g_err_t g_2_array_get_addr(g_2_array_t *self, size_t index, void **out);
+g_err_t g_2_array_get_addr(g_2_array_t *self, size_t index, void **out);
 
 #ifdef __cplusplus
 }
